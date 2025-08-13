@@ -1,41 +1,43 @@
-# 📊 Streamlit AutoML Mini App
+#  Streamlit AutoML Mini App
 
-A simple yet powerful **AutoML** web application built with [Streamlit](https://streamlit.io/) that allows you to upload your dataset, select a machine learning algorithm, and instantly visualize results — all without writing code.
-
----
-
-## 🚀 Features
-- **Upload CSV data** directly from your device
-- Choose learning type:
-  - **Supervised**: Classification / Regression
-  - **Unsupervised**: Clustering
-- Models supported:
-  - Linear Regression
-  - Logistic Regression
-  - SVM
-  - KNN
-  - ANN (MLP)
-  - KMeans
-- Automatic preprocessing:
-  - Handle missing values
-  - Encode categorical features
-  - Scale numerical features
-- Visualizations:
-  - Model fit plots
-  - Scatter plots for regression
-  - Cluster visualizations
+A user-friendly web application built with [Streamlit](https://streamlit.io/) that enables anyone to perform automated machine learning tasks — no coding required. Upload your CSV data, choose a model, get real-time metrics and plots, and even make custom predictions.
 
 ---
 
-## 🖥️ Live Demo
-🔗 **[View the Project Here][(YOUR_PROJECT_LINK_HERE)](https://ml-user-friendly-ryz9crwlrb2crm6mcsbi6d.streamlit.app/)]**  
-*(Replace `YOUR_PROJECT_LINK_HERE` with your deployed Streamlit Cloud link)*
+##  Live Demo
+Check out the app in action here:  
+🔗 [https://ml-user-friendly-ryz9crwlrb2crm6mcsbi6d.streamlit.app/](https://ml-user-friendly-ryz9crwlrb2crm6mcsbi6d.streamlit.app/)
 
 ---
 
-## 📦 Dependencies
+##  Features
 
-This app requires the following Python libraries:
+- Upload CSV file from your local machine.
+- Choose between Supervised (Classification / Regression) or Unsupervised (Clustering) tasks.
+- Supports a variety of commonly used models:
+  - Linear Regression – Predict continuous outcomes using a linear combination of input features.
+  - Logistic Regression – Classify data into categories using a logistic (sigmoid) function.
+  - Support Vector Machines (SVM) – Powerful classification and regression using customizable kernels.
+  - K-Nearest Neighbors (KNN) – Simple yet effective method predicting outputs based on similarity to nearby samples.
+  - Artificial Neural Network (ANN) via MLP – Flexible deep learning approach with customizable hidden layers.
+  - KMeans Clustering (Unsupervised) – Partition data into groups based on similarity via iterative centroid optimization.
+
+- Automatic Preprocessing:
+  - Numeric imputation (mean / median / most frequent).
+  - Categorical imputation (most frequent / constant).
+  - One-hot encoding of categories.
+  - Optional scaling of numeric features for numeric stability.
+
+- Train/Test Split & Metrics:
+  - Classification: Accuracy, Weighted F1, Confusion Matrix, ROC Curve & AUC (binary classification), Training Loss Curve (for ANN).
+  - Regression: MSE, MAE, R², Actual vs Predicted and Residual plots, Training Loss Curve (for ANN).
+  - Clustering: Cluster label counts, Silhouette Score (if applicable), PCA 2D visualization.
+
+- Custom Input Predictions: After training, input feature values manually to get single-sample predictions and probabilities (for classification).
+
+---
+
+##  Dependencies
 
 ```txt
 streamlit
@@ -44,4 +46,4 @@ numpy
 scikit-learn
 matplotlib
 seaborn
-tensorflow  # Optional, only if using ANN (MLP)
+tensorflow  # Optional, only needed if using the ANN (MLP) models
